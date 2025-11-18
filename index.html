@@ -4,8 +4,22 @@ By Jenaro & Kjell                 V-4.1
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Learning App (HTML)</title>
+  <title>Eidoton</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 💠 PWA: Manifest einbinden -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- 💠 PWA: iPad/iPhone Vollbild -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <!-- 💠 Design-Farbe für App Titel & Statusbar -->
+  <meta name="theme-color" content="#ffffff">
+
   <style>
     .rounded-3xl { border-radius: 1.5rem; }
     .rounded-2xl { border-radius: 1rem; }
@@ -89,9 +103,20 @@ By Jenaro & Kjell                 V-4.1
       ],
 
       deutsch: [
-        { question: "Setze den Komma Richtig: Der Hund der vor dem Haus liegt ist sehr zutraulich.", answers: ["Nach der Hund", "Nach vor dem Haus", "Nach sehr"], correct: 2 },
+        { question: "Setze den Komma Richtig: Der Hund der vor dem Haus liegt ist sehr zutraulich.", answers: ["Nach: der Hund", "Nach: vor dem Haus", "Nach: sehr"], correct: 0 },
+        { question: "Setze den Komma Richtig: Wir fahren morgen nach Berlin weil wir dort Verwandte besuchen wollen.", answers: ["Nach:  fahren", "Nach: Berlin", "Nach: morgen "], correct: 1 },
+        { question: "Setze den Komma Richtig: Ich möchte heute ins Kino gehen aber ich habe keine Lust alleine zu gehen.", answers: ["Nach: gehen", "Nach: Lust", "Nach: alleine"], correct: 0 },
+        { question: "Setze den Komma Richtig: Sie hat gestern das Buch das sie von ihrer Freundin bekommen hat gelesen.", answers: ["Nach: bekommen", "Nach: von", "Nach: Buch"], correct: 2 },
+        { question: "Aktiv oder Passiv Satz: Der Hund wird von den Kindern gefüttert.", answers: ["Aktiv", "", ""], correct: 2 },
+        { question: "", answers: ["", "", ""], correct: 2 },
+        { question: "", answers: ["", "", ""], correct: 2 },
+        { question: "", answers: ["", "", ""], correct: 2 },
+        { question: "", answers: ["", "", ""], correct: 2 },
+        { question: "", answers: ["", "", ""], correct: 2 },
+        { question: "", answers: ["", "", ""], correct: 2 },
         { question: "", answers: ["", "", ""], correct: 2 },
         { question: "", answers: ["", "", ""], correct: 2 }
+
       ],
 
       englisch: [
