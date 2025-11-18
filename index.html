@@ -60,14 +60,6 @@ By Jenaro & Kjell                 V-4.6
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
   import { getFirestore, doc, getDoc, setDoc, updateDoc } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
 
-
-   // EEEEEEE   III   DDDDD    OOOOO    TTTTT    OOOOO    N   N
-   // E         I     D    D  O     O     T     O     O   NN  N
-   // EEEEE     I     D    D  O     O     T     O     O   N N N
-   // E         I     D    D  O     O     T     O     O   N  NN
-   // EEEEEEE  III   DDDDD    OOOOO      T      OOOOO    N   N
-
-
   const firebaseConfig = {
     apiKey: "AIzaSyBXZG4vsRDqpe_XRHeb64MV-NbLbKtijWs",
     authDomain: "eidoton.firebaseapp.com",
@@ -142,8 +134,7 @@ By Jenaro & Kjell                 V-4.6
         { question: "What is a synoym for: difficult ", answers: ["easy", "hard", "slow"], correct: 1 },
         { question: "What is a synoym for: Important  ", answers: ["esay", "Happy", "significant"], correct: 2 },
         { question: "What is a synoym for: Start ", answers: ["begin", "speak", "read"], correct: 0 },
-        { question: "Fill in the blanks: H is interested ______ history.", answers: [""on, ""is, ""]at, correct: 01},
-        { question: "Fill in the blanks: ", answers: ["", "", ""], correct: 0 }
+        { question: "Fill in the blanks: This gift is ______ you.", answers: ["from", "on", "for"], correct: 2 }
 
       ]
     }
