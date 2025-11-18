@@ -31,7 +31,6 @@ const configData = {
       ],
 
       deutsch: [
-        { question: "Aktiv oder Passiv Satz mnbvbnnbcghvnghjcfghjvfz8iu zinswers: ["", "", ""], correct: 0 },
         { question: "", answers: ["", "", ""], correct: 0 },
         { question: "", answers: ["", "", ""], correct: 0 },
         { question: "", answers: ["", "", ""], correct: 0 },
