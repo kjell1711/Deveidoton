@@ -1,4 +1,4 @@
-By Jenaro & Kjell                 V-4.5
+By Jenaro & Kjell                 V-4.6
 <!doctype html>
 <html lang="de">
 <head>
@@ -59,6 +59,14 @@ By Jenaro & Kjell                 V-4.5
   <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
   import { getFirestore, doc, getDoc, setDoc, updateDoc } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
+
+
+   // EEEEEEE   III   DDDDD    OOOOO    TTTTT    OOOOO    N   N
+   // E         I     D    D  O     O     T     O     O   NN  N
+   // EEEEE     I     D    D  O     O     T     O     O   N N N
+   // E         I     D    D  O     O     T     O     O   N  NN
+   // EEEEEEE  III   DDDDD    OOOOO      T      OOOOO    N   N
+
 
   const firebaseConfig = {
     apiKey: "AIzaSyBXZG4vsRDqpe_XRHeb64MV-NbLbKtijWs",
@@ -124,18 +132,18 @@ By Jenaro & Kjell                 V-4.5
         { question: "What is Right: He (visit) London last summer.", answers: ["visitet", "visited", "visit"], correct: 1 },
         { question: "What is Right: We (already/eat) lunch when she arrived.", answers: ["had aten", "have ate", "had already eaten"], correct: 2},
         { question: "What is Right: They (live) in Paris for three years", answers: ["have lived", "livet", "had lived"], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 }
+        { question: "Fill in the blanks: I am going ______ the cinema.", answers: ["tu", "to", "do"], correct: 1 },
+        { question: "Fill in the blanks: She was born ______ 1990.", answers: ["in", "on", "in the"], correct: 0 },
+        { question: "Fill in the blanks: They arrived ______ 7 o'clock. ", answers: ["am", "on", "at"], correct: 2 },
+        { question: "Fill in the blanks: We’re meeting ______ Monday. ", answers: ["at", "on", "in"], correct: 1 },
+        { question: "Fill in the blanks: I’ve been waiting ______ an hour.", answers: ["for", "since", "at"], correct: 0 },
+        { question: "What is a synonym for: Happy", answers: ["joyful", "sad", "cry"], correct: 0 },
+        { question: "What is a synoym for: fast", answers: ["slow", "speedy", "run"], correct: 1 },
+        { question: "What is a synoym for: difficult ", answers: ["easy", "hard", "slow"], correct: 1 },
+        { question: "What is a synoym for: Important  ", answers: ["esay", "Happy", "significant"], correct: 2 },
+        { question: "What is a synoym for: Start ", answers: ["begin", "speak", "read"], correct: 0 },
+        { question: "Fill in the blanks: H is interested ______ history.", answers: [""on, ""is, ""]at, correct: 01},
+        { question: "Fill in the blanks: ", answers: ["", "", ""], correct: 0 }
 
       ]
     }
