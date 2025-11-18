@@ -31,32 +31,10 @@ const configData = {
       ],
 
       deutsch: [
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 }
+        [
+
+]
+
 
       ],
 
