@@ -1,32 +1,11 @@
 const configData = {
     questions: {
       mathe: [
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 },
-        { question: "", answers: ["", "", ""], correct: 0 }
+        [
+
+]
+
+]
 
       ],
 
