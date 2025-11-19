@@ -1,4 +1,4 @@
-By Jenaro & Kjell                 V 4.7.5.1
+By Jenaro & Kjell                 V 4.7.5.2
 <!doctype html>
 <html lang="de">
 <head>
@@ -465,13 +465,19 @@ const configData = {
   const data = await loadUserFromFirebase(state.userId);
   if (!data) return;
 
+  // Coins & Stats neu laden
   state.userCoins = data.coins || 0;
   state.userRichtig = data.richtig || 0;
   state.userFalsch = data.falsch || 0;
   state.userHighscore = data.highscore || 0;
 
+  // Ban-Status neu laden
+  state.isBanned = data.ban || false;
+  state.banReason = data.banReason || "";
+
   render();
 }
+
 
 
   async function saveUserToFirebase() {
