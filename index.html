@@ -1,4 +1,4 @@
-By Jenaro & Kjell                 V 4.7.5.7
+By Jenaro & Kjell                 V 4.7.5.6
 <!doctype html>
 <html lang="de">
 <head>
@@ -339,7 +339,6 @@ const configData = {
     feedback: null,
     loginInput: '',
     userId: null,
-    playedGames: 0,
     
     // Auth State
     authStep: 'username', // 'username', 'pin-new', 'pin-login'
@@ -429,9 +428,7 @@ const configData = {
         banReason: "",
         accountCreated: now,
         lastLogin: now,
-        totalLogins: 1,
-        notes: "",
-        playedGames: 0
+        totalLogins: 1
       };
       const userDocRef = doc(db, "users", normalizedName);
       await setDoc(userDocRef, newUser);
@@ -473,8 +470,6 @@ const configData = {
   state.userRichtig = data.richtig || 0;
   state.userFalsch = data.falsch || 0;
   state.userHighscore = data.highscore || 0;
-  state.playedGames = data.playedGames || 0;
-
 
   // Ban-Status neu laden
   state.isBanned = data.ban || false;
@@ -500,26 +495,6 @@ const configData = {
       console.error("Firebase Fehler beim Speichern:", error);
     }
   }
-
-async function incrementPlayedGames() {
-  if (!state.userId) return;
-
-  state.playedGames = (state.playedGames || 0) + 1; // lokal erhöhen
-
-  try {
-    const normalizedUserId = state.userId.toLowerCase();
-    const userDocRef = doc(db, "users", normalizedUserId);
-    await updateDoc(userDocRef, {
-      playedGames: state.playedGames
-    });
-  } catch (error) {
-    console.error("Firebase Fehler beim Update von playedGames:", error);
-  }
-
-  render(); // UI aktualisieren
-}
-
-
 
   // === Auth Actions ===
   
@@ -792,27 +767,23 @@ async function handleTabChange(tab) {
   }
 
   async function endFlappyBird() {
-  if (!state.gameActive) return;
-  
-  state.gameActive = false;
-  state.gameOver = true;
-  
-  if (state.gameScore > state.userHighscore) {
-    state.userHighscore = state.gameScore;
-    await saveUserToFirebase();
+    if (!state.gameActive) return;
+    
+    state.gameActive = false;
+    state.gameOver = true;
+    
+    if (state.gameScore > state.userHighscore) {
+      state.userHighscore = state.gameScore;
+      await saveUserToFirebase();
+    }
+    
+    if (state.gameFrameId) {
+      cancelAnimationFrame(state.gameFrameId);
+      state.gameFrameId = null;
+    }
+    
+    render();
   }
-
-  // Spiel gezählt
-  await incrementPlayedGames();
-  
-  if (state.gameFrameId) {
-    cancelAnimationFrame(state.gameFrameId);
-    state.gameFrameId = null;
-  }
-  
-  render();
-}
-
 
   function stopFlappyBird() {
     state.gameActive = false;
