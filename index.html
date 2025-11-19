@@ -1,4 +1,4 @@
-By Jenaro & Kjell                 V 4.7.5
+By Jenaro & Kjell                 V 4.7.5.1
 <!doctype html>
 <html lang="de">
 <head>
@@ -458,6 +458,22 @@ const configData = {
     }
   }
 
+ // function user daten laden 
+ async function refreshUserData() {
+  if (!state.userId) return;
+
+  const data = await loadUserFromFirebase(state.userId);
+  if (!data) return;
+
+  state.userCoins = data.coins || 0;
+  state.userRichtig = data.richtig || 0;
+  state.userFalsch = data.falsch || 0;
+  state.userHighscore = data.highscore || 0;
+
+  render();
+}
+
+
   async function saveUserToFirebase() {
     if (!state.userId) return;
     try {
@@ -605,16 +621,29 @@ const configData = {
     }, 1500);
   }
 
-  function handleTabChange(tab) {
-    state.currentTab = tab;
-    state.feedback = null;
-    if (['mathe','deutsch','englisch'].includes(tab)) {
-      state.currentQuestion = getRandomQuestion(tab);
-    } else {
-      state.currentQuestion = null;
-    }
-    render();
+
+
+async function handleTabChange(tab) {
+  state.currentTab = tab;
+  state.feedback = null;
+
+  if (['mathe','deutsch','englisch'].includes(tab)) {
+    state.currentQuestion = getRandomQuestion(tab);
+  } else {
+    state.currentQuestion = null;
   }
+
+  // 👉 beim Profil Tab neu laden
+  if (tab === "profil") {
+    await refreshUserData();
+    return; // render wird in refreshUserData gemacht
+  }
+
+  render();
+}
+
+
+
 
   // === Flappy Bird Game ===
   
