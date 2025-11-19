@@ -1,4 +1,4 @@
-By Jenaro & Kjell                 V 4.7.5.2
+By Jenaro & Kjell                 V 4.7.5.3
 <!doctype html>
 <html lang="de">
 <head>
@@ -633,20 +633,18 @@ async function handleTabChange(tab) {
   state.currentTab = tab;
   state.feedback = null;
 
+  // 👉 Immer Daten neu laden, egal welcher Tab
+  await refreshUserData();
+
   if (['mathe','deutsch','englisch'].includes(tab)) {
     state.currentQuestion = getRandomQuestion(tab);
   } else {
     state.currentQuestion = null;
   }
 
-  // 👉 beim Profil Tab neu laden
-  if (tab === "profil") {
-    await refreshUserData();
-    return; // render wird in refreshUserData gemacht
-  }
-
   render();
 }
+
 
 
 
