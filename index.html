@@ -400,7 +400,7 @@ const configData = {
   async function loadUserFromFirebase(name) {
     try {
       const normalizedName = name.toLowerCase();
-      const userDocRef = doc(db, "vorstellung", normalizedName);
+      const userDocRef = doc(db, "users", normalizedName);
       const userDoc = await getDoc(userDocRef);
       
       if (userDoc.exists()) {
